@@ -9,6 +9,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <PublishTrimmed>true</PublishTrimmed>
+    <_SuppressWinFormsTrimError>true</_SuppressWinFormsTrimError>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MouseKeyHook" Version="5.7.1"/>
     <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.2-beta">
